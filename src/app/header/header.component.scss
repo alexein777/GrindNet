@@ -1,0 +1,13 @@
+@import '../../variables';
+
+:host {
+  mat-toolbar {
+    background: $futuristic-strike-black;
+    color: $futuristic-strike-teal;
+    font-family: "Frostbite-Boss-Fight";
+  }
+
+  .item-gap {
+    padding: 15px;
+  }
+}
