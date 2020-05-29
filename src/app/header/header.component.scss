@@ -2,12 +2,18 @@
 
 :host {
   mat-toolbar {
-    background: $futuristic-strike-black;
-    color: $futuristic-strike-teal;
+    height: 80px;
+    background: $vsc-default-background-darker;
+    color: $vsc-default-text;
     font-family: "Frostbite-Boss-Fight";
   }
 
-  .item-gap {
-    padding: 15px;
+  .toolbar-item {
+    padding: 10px;
+    size: 8px!important;
+  }
+
+  .left-spacing {
+    margin-left: 30px;
   }
 }

@@ -1,7 +1,19 @@
 <mat-toolbar>
-  <span>GrindNet</span>
+  <div>
+    <span>
+      <img src="../../assets/images/grinding-wheel v2.png" width="40px" height="40px" alt="logo"/>
+    </span>
+    <span>
+      <img src="../../assets//images/GrindNet plain v2.png" width="120px" height="35px" alt="GrindNet"/>
+    </span>
+  </div>
+  <div class="left-spacing">
+    <span *ngFor="let toolbarItem of toolbarItems" class="toolbar-item">
+      {{ toolbarItem.name }}
+    </span>
+  </div>
   <span class="flex-spacer" fxLayoutAlign="flex-end"></span>
-  <span class="item-gap">Games</span>
-  <span class="item-gap">Sponsors</span>
-  <span class="item-gap">Hall of Fame</span>
+  <span class="toolbar-item">
+    Login / Sign Up
+  </span>
 </mat-toolbar>
