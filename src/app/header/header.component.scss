@@ -2,18 +2,38 @@
 
 :host {
   mat-toolbar {
-    height: 80px;
+    // display: flex;
+    // align-items: flex-start;
+    // padding-top: 6px;
+    height: 70px;
     background: $vsc-default-background-darker;
     color: $vsc-default-text;
-    font-family: "Frostbite-Boss-Fight";
   }
 
-  .toolbar-item {
-    padding: 10px;
-    size: 8px!important;
-  }
-
-  .left-spacing {
+  .navbar-items-align {
     margin-left: 30px;
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .navbar-item {
+    padding: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 18px;
+  }
+
+  .navbar-items {
+    margin-left: 30px;
+    display: flex;
+    flex-direction: row;
+  }
+
+  mat-expansion-panel {
+    background: $vsc-default-background-darker;
+  }
+
+  mat-expansion-panel-header {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: $vsc-default-text;
   }
 }

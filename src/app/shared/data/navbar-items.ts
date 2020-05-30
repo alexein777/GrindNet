@@ -1,6 +1,6 @@
-import { ToolbarItem } from '../models/toolbar-item';
+import { NavbarItem } from '../models/navbar-item';
 
-export const TOOLBAR_ITEMS: ToolbarItem[] = [
+export const NAVBAR_ITEMS: NavbarItem[] = [
   {
     name: 'Games',
     path: '/games'

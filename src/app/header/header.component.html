@@ -7,13 +7,19 @@
       <img src="../../assets//images/GrindNet plain v2.png" width="120px" height="35px" alt="GrindNet"/>
     </span>
   </div>
-  <div class="left-spacing">
-    <span *ngFor="let toolbarItem of toolbarItems" class="toolbar-item">
-      {{ toolbarItem.name }}
-    </span>
+  <div class="navbar-items">
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>Games</mat-expansion-panel-header>
+      <p>PC</p>
+      <p>PlayStation</p>
+      <p>Xbox</p>
+    </mat-expansion-panel>
+
+    <a class="navbar-item">Hall of Fame</a>
+    <a class="navbar-item">Sponsors</a>
+    <a class="navbar-item">Nominations</a>
+    <a class="navbar-item">News</a>
   </div>
   <span class="flex-spacer" fxLayoutAlign="flex-end"></span>
-  <span class="toolbar-item">
-    Login / Sign Up
-  </span>
+  <a class="navbar-item">Login</a> / <a class="navbar-item">Sign Up</a>
 </mat-toolbar>

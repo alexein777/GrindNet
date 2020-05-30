@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { ToolbarItemsService } from './toolbar-items.service';
+import { NavbarService } from './navbar.service';
 
-describe('ToolbarItemsService', () => {
-  let service: ToolbarItemsService;
+describe('NavbarService', () => {
+  let service: NavbarService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(ToolbarItemsService);
+    service = TestBed.inject(NavbarService);
   });
 
   it('should be created', () => {

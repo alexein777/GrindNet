@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ToolbarItem } from '../shared/models/toolbar-item';
-import { ToolbarItemsService } from '../services/toolbar-items.service';
+import { NavbarItem } from '../shared/models/navbar-item';
+import { NavbarService } from '../services/navbar.service';
 
 @Component({
   selector: 'app-header',
@@ -8,12 +8,12 @@ import { ToolbarItemsService } from '../services/toolbar-items.service';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  toolbarItems: ToolbarItem[];
+  navbarItems: NavbarItem[];
 
-  constructor(private toolbarItemsService: ToolbarItemsService) { }
+  constructor(private navbarService: NavbarService) { }
 
   ngOnInit(): void {
-    this.toolbarItems = this.toolbarItemsService.getToolbarItems();
+    this.navbarItems = this.navbarService.getNavbarItems();
   }
 
 }
