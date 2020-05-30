@@ -9,7 +9,9 @@
   </div>
   <div class="navbar-items">
     <mat-expansion-panel>
-      <mat-expansion-panel-header>Games</mat-expansion-panel-header>
+      <mat-expansion-panel-header>
+        <mat-panel-title>Games</mat-panel-title>
+      </mat-expansion-panel-header>
       <p>PC</p>
       <p>PlayStation</p>
       <p>Xbox</p>
@@ -21,5 +23,9 @@
     <a class="navbar-item">News</a>
   </div>
   <span class="flex-spacer" fxLayoutAlign="flex-end"></span>
-  <a class="navbar-item">Login</a> / <a class="navbar-item">Sign Up</a>
+  <span class="display-flex">
+    <a class="navbar-item">Login</a>
+    <p class="navbar-slash"> / </p>
+    <a class="navbar-item">Sign Up</a>
+  </span>
 </mat-toolbar>
