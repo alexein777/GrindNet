@@ -6,10 +6,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
+  slideshowImages: string[];
 
   constructor() { }
 
   ngOnInit(): void {
+    this.slideshowImages = [
+      '../../assets/images/skill.png',
+      '../../assets/images/hall-of-fame.jpg',
+      '../../assets/images/gaming-sponsors.jpg',
+      '../../assets/images/esports.jpg'
+    ];
   }
 
 }

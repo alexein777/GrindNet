@@ -8,6 +8,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatListModule } from '@angular/material/list';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatIconModule, MatIcon } from '@angular/material/icon';
+import { SlideshowModule } from 'ng-simple-slideshow';
 
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
@@ -29,7 +30,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     MatToolbarModule,
     MatListModule,
     MatExpansionModule,
-    MatIconModule
+    MatIconModule,
+    SlideshowModule
   ],
   providers: [],
   bootstrap: [AppComponent]

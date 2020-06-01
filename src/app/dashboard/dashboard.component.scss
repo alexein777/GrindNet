@@ -1,5 +1,43 @@
-.navbar-item {
-  padding: 10px;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: 18px;
+@import '../../variables';
+
+.gn-corousel-container {
+  width: 100%;
+  height: 300px;
 }
+
+.carousel-item, .carousel-item.active {
+  height: 650px;
+}
+
+.gn-cover {
+  object-fit: cover;
+  height: 100%;
+  opacity: 0.5;
+}
+
+.gn-carousel-caption {
+  position: absolute;
+  top: 60px;
+  left: 40px;
+}
+
+.gn-carousel-header {
+  height: 70px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  padding-left: 0px;
+  font-size: 66px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: $futuristic-strike-light;
+}
+
+.gn-carousel-text {
+  position: absolute;
+  top: 60px;
+  left: 4px;
+  font-size: 18px;
+  font-family: Helvetica, Arial, sans-serif;
+  color: $futuristic-strike-lightgray;
+}
+
