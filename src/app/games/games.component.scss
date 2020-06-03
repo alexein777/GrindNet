@@ -1,0 +1,24 @@
+@import '../../variables';
+
+.gn-game-card {
+  width: 250px;
+  height: 320px;
+  display: inline-block;
+  background: $futuristic-strike-black;
+  border: 0.5px solid $futuristic-strike-lightgray;
+  // padding: 1px 1px 1px 1px;
+}
+
+.gn-game-image {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+}
+
+.gn-game-name {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  color: $futuristic-strike-lightgray;
+  text-transform: uppercase;
+  text-align: center;
+}

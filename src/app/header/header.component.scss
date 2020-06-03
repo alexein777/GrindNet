@@ -10,6 +10,10 @@
     color: $vsc-default-text;
   }
 
+  .gn-logo-text-box {
+    padding-top: 5px;
+  }
+
   .navbar-item {
     padding: 10px 10px 0px 10px;
     font-family: Helvetica, Arial, sans-serif;
@@ -38,6 +42,10 @@
     box-shadow: none;
   }
 
+  ::ng-deep.mat-expansion-panel.ng-tns-c37-0.mat-expanded, mat-expansion-panel-body.ng-tns-c37-0 {
+    z-index: 1;
+  }
+
   mat-expansion-panel-header {
     height: 42px!important;
     padding: 10px 10px 0px 0px;
@@ -51,7 +59,7 @@
   }
 
   mat-panel-title:hover {
-    color: red;
+    color: $futuristic-strike-gold;
   }
 
   mat-list-item {
@@ -73,8 +81,9 @@
   }
 
   .expansion-panel-list mat-list-item a:hover {
-    color: red;
+    color: $futuristic-strike-gold;
     cursor: pointer;
+    text-decoration: none;
   }
 
   ::ng-deep#mat-expansion-panel-header-0:hover {

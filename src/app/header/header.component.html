@@ -1,10 +1,14 @@
 <mat-toolbar>
-  <div>
+  <div class="gn-logo-text-box">
     <span>
-      <img src="../../assets/images/grinding-wheel v2.png" width="40px" height="40px" alt="logo"/>
+      <a routerLink="/dashboard">
+        <img src="../../assets/images/grinding-wheel v2.png" width="40px" height="40px" alt="logo"/>
+      </a>
     </span>
     <span>
-      <img src="../../assets//images/GrindNet plain v2.png" width="120px" height="35px" alt="GrindNet"/>
+      <a routerLink="/dashboard">
+        <img src="../../assets//images/GrindNet plain v2.png" width="120px" height="35px" alt="GrindNet"/>
+      </a>
     </span>
   </div>
   <div class="navbar-items">
@@ -16,15 +20,15 @@
       <mat-list class="expansion-panel-list">
         <mat-list-item>
           <img mat-list-icon src="../../assets/images/pc-icon.png" alt=":pc" class="panel-icon">
-          <a mat-line>PC</a>
+          <a mat-line [routerLink]="['/games', 'pc']">PC</a>
         </mat-list-item>
         <mat-list-item>
           <img mat-list-icon src="../../assets/images/ps-icon.png" alt=":ps" class="panel-icon">
-          <a mat-line>PS4</a>
+          <a mat-line [routerLink]="['/games', 'ps4']">PS4</a>
         </mat-list-item>
         <mat-list-item>
           <img mat-list-icon src="../../assets/images/xbox-icon.png" alt=":xbox" class="panel-icon">
-          <a mat-line>Xbox</a>
+          <a mat-line [routerLink]="['/games', 'xbox']">Xbox</a>
         </mat-list-item>
       </mat-list>
     </mat-expansion-panel>

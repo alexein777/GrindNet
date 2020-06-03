@@ -8,12 +8,13 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatListModule } from '@angular/material/list';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatIconModule, MatIcon } from '@angular/material/icon';
-import { SlideshowModule } from 'ng-simple-slideshow';
+import { MatCardModule } from '@angular/material/card';
 
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
 import { DefaultComponent } from './default/default.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { GamesComponent } from './games/games.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     HomeComponent,
     HeaderComponent,
     DefaultComponent,
-    DashboardComponent
+    DashboardComponent,
+    GamesComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +33,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     MatListModule,
     MatExpansionModule,
     MatIconModule,
-    SlideshowModule
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
