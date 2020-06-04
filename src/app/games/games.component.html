@@ -3,21 +3,16 @@
 <div *ngIf="selectedConsole">
   <div [ngSwitch]="selectedConsole">
     <div *ngSwitchCase="'pc'">
-      <mat-card *ngFor="let pcGame of pcGames" class="gn-game-card">
-        <img mat-card-image [src]="pcGame.imageSrc" class="gn-game-image">
-        <mat-card-footer>
-          <mat-card-title class="gn-game-name">{{ pcGame.name }}</mat-card-title>
-        </mat-card-footer>
-      </mat-card>
+      <mat-grid-list cols="5" rowHeight="300px">
+        <mat-grid-tile *ngFor="let pcGame of pcGames" class="gn-grid-tile">
+          <mat-card class="gn-game-card">
+            <img mat-card-image [src]="pcGame.imageSrc" class="gn-game-image">
+            <mat-card-footer>
+              <mat-card-title class="gn-game-name">{{ pcGame.name }}</mat-card-title>
+            </mat-card-footer>
+          </mat-card>
+        </mat-grid-tile>
+      </mat-grid-list>
     </div>
   </div>
-
-  <ol *ngIf="selectedConsole == 'pc'">
-    <ol>
-      <li *ngFor="let pcGame of pcGames">
-        <p>{{ pcGame.name }}</p>
-        <p>{{ pcGame.type }}</p>
-      </li>
-    </ol>
-  </ol>
 </div>

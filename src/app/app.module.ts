@@ -9,6 +9,7 @@ import { MatListModule } from '@angular/material/list';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatIconModule, MatIcon } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
+import { MatGridListModule } from '@angular/material/grid-list';
 
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
@@ -33,7 +34,8 @@ import { GamesComponent } from './games/games.component';
     MatListModule,
     MatExpansionModule,
     MatIconModule,
-    MatCardModule
+    MatCardModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
