@@ -1,6 +1,7 @@
-<p>games works!</p>
-
-<div *ngIf="selectedConsole">
+<div *ngIf="selectedConsole" class="gn-games-container">
+  <h1>PC Games</h1>
+  <mat-divider></mat-divider>
+  <input type="text" placeholder="Search for a game ..." class="form-control gn-game-search">
   <div [ngSwitch]="selectedConsole">
     <div *ngSwitchCase="'pc'">
       <mat-grid-list cols="5" rowHeight="300px">
