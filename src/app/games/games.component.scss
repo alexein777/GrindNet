@@ -25,9 +25,9 @@
 }
 
 .gn-game-image {
+  // object-fit: cover;
   width: 100%;
   height: 75%;
-  object-fit: contain;
   margin: 0px;
 }
 
@@ -35,11 +35,19 @@
   margin-top: 0px;
 }
 
-.gn-game-name {
+.gn-game-title-container {
+  padding: 6px;
+  height: 25%;
+}
+
+.gn-game-title {
   font-family: Helvetica, Arial, sans-serif;
-  font-size: 15px;
+  font-size: 14px;
   color: $futuristic-strike-lightgray;
   text-transform: uppercase;
   text-align: center;
-  margin-top: 16px;
+  padding-top: 18px;
+  // padding-bottom: 10px;
 }
+
+

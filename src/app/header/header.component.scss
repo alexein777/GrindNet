@@ -22,6 +22,11 @@
     text-transform: uppercase;
   }
 
+  .navbar-item:hover {
+    color: $futuristic-strike-gold;
+    cursor: pointer;
+  }
+
   .navbar-slash {
     padding-top: 10px;
     font-family: Helvetica, Arial, sans-serif;
@@ -84,6 +89,10 @@
     color: $futuristic-strike-gold;
     cursor: pointer;
     text-decoration: none;
+  }
+
+  .gn-active {
+    color: $futuristic-strike-gold;
   }
 
   ::ng-deep#mat-expansion-panel-header-0:hover {

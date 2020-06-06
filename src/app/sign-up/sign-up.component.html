@@ -1,0 +1,26 @@
+<mat-toolbar class="gn-signup-toolbar">
+  Sign up
+  <span class="flex-spacer"></span>
+  <button mat-button mat-dialog-close>&times;</button>
+</mat-toolbar>
+
+<form novalidate>
+  <mat-dialog-content>
+    <mat-form-field>
+      <label for="username">Username</label>
+      <input name="username" type="text" class="form-control" placeholder="Username" required>
+        <!-- <mat-error>Username is required</mat-error> -->
+    </mat-form-field>
+    <mat-form-field>
+      <label for="password">Password</label>
+      <input name="password" type="password" class="form-control" placeholder="Password" required>
+        <!-- <mat-error>Password is required</mat-error> -->
+    </mat-form-field>
+    <mat-checkbox name="remember">Remember Me</mat-checkbox>
+  </mat-dialog-content>
+  <mat-dialog-actions>
+    <span class="flex-spacer"></span>
+    <button mat-button mat-dialog-close>Cancel</button>
+    <button type="submit" mat-button>Sign Up</button>
+  </mat-dialog-actions>
+</form>

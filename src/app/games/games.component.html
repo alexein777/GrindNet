@@ -1,16 +1,16 @@
 <div *ngIf="selectedConsole" class="gn-games-container">
   <h1>PC Games</h1>
   <mat-divider></mat-divider>
-  <input type="text" placeholder="Search for a game ..." class="form-control gn-game-search">
+  <input type="text" placeholder="Search game ... (name, type, publisher etc.)" class="form-control gn-game-search">
   <div [ngSwitch]="selectedConsole">
     <div *ngSwitchCase="'pc'">
-      <mat-grid-list cols="5" rowHeight="300px">
+      <mat-grid-list cols="5" rowHeight="280px">
         <mat-grid-tile *ngFor="let pcGame of pcGames" class="gn-grid-tile">
           <mat-card class="gn-game-card">
             <img mat-card-image [src]="pcGame.imageSrc" class="gn-game-image">
-            <mat-card-footer>
-              <mat-card-title class="gn-game-name">{{ pcGame.name }}</mat-card-title>
-            </mat-card-footer>
+            <mat-card-title class="gn-game-title-container">
+              <p class="gn-game-title">{{ pcGame.name }}</p>
+            </mat-card-title>
           </mat-card>
         </mat-grid-tile>
       </mat-grid-list>
