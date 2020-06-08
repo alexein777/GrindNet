@@ -39,22 +39,22 @@ $grind-net-theme: mat-dark-theme($grind-net-primary, $grind-net-accent, $grind-n
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
-.container-full {
+.gn-container-full {
   width: 100%;
   height: 100%;
   background: $vsc-default-background-darker;
   color: $futuristic-strike-lightgray;
 }
 
-.container {
+.gn-container {
   margin: 20px;
   display: flex;
 }
 
-.flex-spacer {
+.gn-flex-spacer {
   flex: 1 1 auto;
 }
 
-.display-flex {
+.gn-display-flex {
   display: flex;
 }

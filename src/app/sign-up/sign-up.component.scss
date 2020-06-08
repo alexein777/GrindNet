@@ -1,8 +1,39 @@
 @import '../../variables';
 
-.gn-signup-toolbar {
-  background: $futuristic-strike-gray;
-  color: $futuristic-strike-teal;
-  width: 100%;
-  height: 60px;
+$input-background-light: rgb(226, 226, 226);
+
+mat-dialog-container {
+  background: $vsc-default-background;
 }
+
+.gn-dialog-default {
+  font-family: Helvetica, Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  color: $futuristic-strike-lightgray;
+}
+
+.gn-signup-title {
+  text-align: center;
+  font-size: 22px;
+  margin-bottom: 30px;
+}
+
+.gn-signup-input {
+  background: $input-background-light;
+}
+
+.gn-form-group {
+  margin-bottom: 10px;
+}
+
+.gn-checkbox {
+  height: 12px;
+  width: 12px;
+  background: $input-background-light;
+}
+
+// ng-trigger ng-trigger-dialogContainer ng-star-inserted
+// ::ng-deep.mat-dialog-container.ng-tns-c41-2  {
+//   padding: 0px;
+//   background: $vsc-default-background;
+// }

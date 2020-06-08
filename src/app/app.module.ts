@@ -13,6 +13,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
@@ -21,6 +22,9 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { GamesComponent } from './games/games.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { LoginComponent } from './login/login.component';
+
+import { GameService } from './services/game.service';
+import { NavbarService } from './services/navbar.service';
 
 @NgModule({
   declarations: [
@@ -37,6 +41,8 @@ import { LoginComponent } from './login/login.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    FormsModule,
+    ReactiveFormsModule,
     MatToolbarModule,
     MatListModule,
     MatExpansionModule,
@@ -45,9 +51,15 @@ import { LoginComponent } from './login/login.component';
     MatGridListModule,
     MatDialogModule,
     MatFormFieldModule,
-    MatCheckboxModule
+    MatCheckboxModule,
   ],
-  providers: [],
+  providers: [
+    GameService,
+    NavbarService
+  ],
+  entryComponents: [
+    SignUpComponent
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,26 +1,42 @@
-<mat-toolbar class="gn-signup-toolbar">
-  Sign up
-  <span class="flex-spacer"></span>
-  <button mat-button mat-dialog-close>&times;</button>
-</mat-toolbar>
+<div class="container gn-dialog-default">
+  <p class="gn-signup-title">Sign Up</p>
+  <hr>
 
-<form novalidate>
-  <mat-dialog-content>
-    <mat-form-field>
-      <label for="username">Username</label>
-      <input name="username" type="text" class="form-control" placeholder="Username" required>
-        <!-- <mat-error>Username is required</mat-error> -->
-    </mat-form-field>
-    <mat-form-field>
-      <label for="password">Password</label>
-      <input name="password" type="password" class="form-control" placeholder="Password" required>
-        <!-- <mat-error>Password is required</mat-error> -->
-    </mat-form-field>
-    <mat-checkbox name="remember">Remember Me</mat-checkbox>
-  </mat-dialog-content>
-  <mat-dialog-actions>
-    <span class="flex-spacer"></span>
-    <button mat-button mat-dialog-close>Cancel</button>
-    <button type="submit" mat-button>Sign Up</button>
-  </mat-dialog-actions>
-</form>
+  <form novalidate #sform="ngForm" [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+    <mat-dialog-content>
+      <div class="form-group">
+        <label for="username" class="form-check-label">Username</label>
+        <input name="username" formControlName="username" type="text"
+          class="form-control gn-signup-input" placeholder="Username" required>
+      </div>
+      <div class="form-group">
+        <label for="password" class="form-check-label">Password</label>
+        <input name="password" formControlName="password" type="password"
+          class="form-control gn-signup-input" placeholder="Password" required>
+      </div>
+      <div class="form-group">
+        <label for="email" class="form-check-label">Email</label>
+        <input name="email" formControlName="email" type="email"
+          class="form-control gn-signup-input" placeholder="Email" required>
+      </div>
+      <div class="form-group">
+        <div class="form-check">
+          <input #sponsorsCheckbox class="form-check-input gn-checkbox" type="checkbox"
+            (click)="onChangeSponsorship()">
+          <label class="form-check-label" for="sponsored-player">
+            Sponsored player?
+          </label>
+        </div>
+      </div>
+      <div *ngIf="sponsoredPlayer">
+        <label for="sponsors" class="form-check-label">Sponsors</label>
+        <input name="sponsors" formControlName="sponsors" type="test"
+          class="form-control gn-signup-input" placeholder="Sponsor names (separated by a comma)" required>
+      </div>
+      <div class="form-group form-row">
+        <button class="btn btn-primary" type="submit" [disabled]="signupForm.invalid">Submit</button>
+        <button class="btn btn-danger" type="reset" (click)="onResetForm()">Reset</button>
+      </div>
+    </mat-dialog-content>
+  </form>
+</div>
