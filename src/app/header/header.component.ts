@@ -24,7 +24,7 @@ export class HeaderComponent implements OnInit {
   }
 
   openSignUpForm() {
-    const windowOptions = { width: '500px', height: '600px'};
+    const windowOptions = { width: '450px', height: '520px'};
     this.dialog.open(SignUpComponent, windowOptions);
   }
 

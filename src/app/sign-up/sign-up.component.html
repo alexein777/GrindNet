@@ -8,16 +8,19 @@
         <label for="username" class="form-check-label">Username</label>
         <input name="username" formControlName="username" type="text"
           class="form-control gn-signup-input" placeholder="Username" required>
+          <mat-error *ngIf="formErrors.username" class="gn-error">{{ formErrors.username }}</mat-error>
       </div>
       <div class="form-group">
         <label for="password" class="form-check-label">Password</label>
         <input name="password" formControlName="password" type="password"
           class="form-control gn-signup-input" placeholder="Password" required>
+          <mat-error *ngIf="formErrors.password" class="gn-error">{{ formErrors.password }}</mat-error>
       </div>
       <div class="form-group">
         <label for="email" class="form-check-label">Email</label>
         <input name="email" formControlName="email" type="email"
-          class="form-control gn-signup-input" placeholder="Email" required>
+          class="form-control gn-signup-input" placeholder="Email" email required>
+        <mat-error *ngIf="formErrors.email" class="gn-error">{{ formErrors.email }}</mat-error>
       </div>
       <div class="form-group">
         <div class="form-check">
@@ -33,10 +36,10 @@
         <input name="sponsors" formControlName="sponsors" type="test"
           class="form-control gn-signup-input" placeholder="Sponsor names (separated by a comma)" required>
       </div>
-      <div class="form-group form-row">
-        <button class="btn btn-primary" type="submit" [disabled]="signupForm.invalid">Submit</button>
-        <button class="btn btn-danger" type="reset" (click)="onResetForm()">Reset</button>
-      </div>
     </mat-dialog-content>
+    <div class="form-group form-row justify-content-center gn-button-margin">
+      <button class="btn gn-btn-primary" type="submit" [disabled]="signupForm.invalid">Submit</button>
+      <button class="btn gn-btn-danger" type="reset" (click)="onResetForm()">Reset</button>
+    </div>
   </form>
 </div>

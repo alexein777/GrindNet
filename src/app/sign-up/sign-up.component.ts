@@ -13,32 +13,37 @@ export class SignUpComponent implements OnInit {
 
   sponsoredPlayer = false;
   signupForm: FormGroup;
-  userDatabase: UserAccount[];
+  userDatabase: UserAccount[] = [];
+  emailPattern = '[a-zA-Z][a-zA-Z0-9_\.]*@[a-z]+[.][a-z]+';
 
   FORM_INITIAL_VALUE = {
-    username: '',
-    password: '',
-    email: '',
-    sponsors: ''
+    'username': '',
+    'password': '',
+    'email': '',
+    'sponsors': ''
   };
 
-  formErrors = this.FORM_INITIAL_VALUE;
+  formErrors = {
+    'username': '',
+    'password': '',
+    'email': '',
+    'sponsors': ''
+  };
 
   validationMessages = {
-    username: {
-      required: 'Username is required',
-      minLength: 'Username must be at least 2 characters long',
-      maxLength: 'Username can\'t be over 20 characters long'
+    'username': {
+      'required': 'Username is required',
+      'minlength': 'Username must be at least 2 characters long',
+      'maxlength': 'Username can\'t be over 20 characters long'
     },
-    password: {
-      required: 'Password is required',
-      minLength: 'Username must be at least 4 characters long',
-      maxLength: 'Username can\'t be over 25 characters long',
-      pattern: 'Password must contain at least one uppercase, one digit and one special character'
+    'password': {
+      'required': 'Password is required',
+      'minlength': 'Password must be at least 4 characters long',
+      'maxlength': 'Password can\'t be over 25 characters long',
     },
-    email: {
-      required: 'Email is required',
-      pattern: 'Invalid email pattern'
+    'email': {
+      'required': 'Email is required',
+      'email': 'Invalid email pattern'
     }
   };
 
@@ -52,7 +57,7 @@ export class SignUpComponent implements OnInit {
   createForm() {
     this.signupForm = this.fb.group({
       username: ['', [Validators.required, Validators.minLength(2), Validators.maxLength(20)]],
-      password: ['', [Validators.required, Validators.minLength(4), Validators.maxLength(25), Validators.pattern]],
+      password: ['', [Validators.required, Validators.minLength(4), Validators.maxLength(25)]],
       email: ['', [Validators.required, Validators.email]],
       sponsors: ['']
     });
@@ -65,15 +70,6 @@ export class SignUpComponent implements OnInit {
 
   onValueChanges(data?: any) {
     if (!this.signupForm) { return; }
-
-    // if (this.sponsorsCheckbox) {
-    //   console.log(this.sponsorsCheckbox.nativeElement.value);
-    //   if (this.sponsorsCheckbox.nativeElement.value === 'checked') {
-    //     this.sponsoredPlayer = true;
-    //   } else {
-    //     this.sponsoredPlayer = false;
-    //   }
-    // }
 
     const form = this.signupForm;
 
