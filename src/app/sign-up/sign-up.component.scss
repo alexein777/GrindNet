@@ -1,7 +1,5 @@
 @import '../../variables';
 
-$input-background-light: rgb(226, 226, 226);
-
 mat-dialog-container {
   background: $vsc-default-background;
 }
@@ -22,19 +20,19 @@ mat-dialog-container {
   background: $input-background-light;
 }
 
-.gn-form-group {
-  margin-bottom: 10px;
-}
-
 .gn-checkbox {
   height: 12px;
   width: 12px;
   background: $input-background-light;
 }
 
+.gn-form-group {
+  margin-bottom: 10px;
+}
+
 .gn-btn-primary {
   background: $gn-btn-primary;
-  color: $futuristic-strike-light;
+  color: $futuristic-strike-lightgray;
   font-family: Helvetica, Arial, sans-serif;
   font-size: 14px;
 }

@@ -20,7 +20,8 @@ export class HeaderComponent implements OnInit {
   }
 
   openLoginForm() {
-    // TODO: zavrsiti
+    const windowOptions = { width: '380px', height: '400px'};
+    this.dialog.open(LoginComponent, windowOptions);
   }
 
   openSignUpForm() {

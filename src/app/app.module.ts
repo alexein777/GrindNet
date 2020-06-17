@@ -25,6 +25,8 @@ import { LoginComponent } from './login/login.component';
 
 import { GameService } from './services/game.service';
 import { NavbarService } from './services/navbar.service';
+import { FooterComponent } from './footer/footer.component';
+import { HallOfFameComponent } from './hall-of-fame/hall-of-fame.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,9 @@ import { NavbarService } from './services/navbar.service';
     DashboardComponent,
     GamesComponent,
     SignUpComponent,
-    LoginComponent
+    LoginComponent,
+    FooterComponent,
+    HallOfFameComponent
   ],
   imports: [
     BrowserModule,

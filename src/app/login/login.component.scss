@@ -1,0 +1,47 @@
+@import '../../variables';
+
+.gn-dialog-default {
+  font-family: Helvetica, Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  color: $futuristic-strike-lightgray;
+}
+
+.gn-login-title {
+  text-align: center;
+  font-size: 22px;
+  margin-bottom: 30px;
+}
+
+.gn-login-input {
+  background: $input-background-light;
+}
+
+.gn-form-group {
+  margin-bottom: 10px;
+}
+
+.gn-form-group {
+  margin-bottom: 10px;
+}
+
+.gn-btn-primary {
+  background: $gn-btn-primary;
+  color: $futuristic-strike-lightgray;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 14px;
+}
+
+.gn-btn-danger {
+  background: $gn-btn-danger;
+  color: $futuristic-strike-lightgray;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 14px;
+}
+
+.gn-error {
+  color: $gn-btn-danger;
+}
+
+.gn-button-margin {
+  margin-top: 30px;
+}
