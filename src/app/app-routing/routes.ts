@@ -4,6 +4,8 @@ import { HomeComponent } from '../home/home.component';
 import { DefaultComponent } from '../default/default.component';
 import { DashboardComponent } from '../dashboard/dashboard.component';
 import { GamesComponent } from '../games/games.component';
+import { HallOfFameComponent } from '../hall-of-fame/hall-of-fame.component';
+import { SponsorsComponent } from '../sponsors/sponsors.component';
 
 export const routes: Routes = [
   {
@@ -12,7 +14,9 @@ export const routes: Routes = [
     children: [
       { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
       { path: 'dashboard', component: DashboardComponent },
-      { path: 'games/:console', component: GamesComponent}
+      { path: 'games/:console', component: GamesComponent},
+      { path: 'hall-of-fame', component: HallOfFameComponent },
+      { path: 'sponsors', component: SponsorsComponent }
     ]
   }
 ];

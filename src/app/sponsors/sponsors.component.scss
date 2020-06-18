@@ -1,0 +1,19 @@
+@import '../../variables';
+
+.gn-sponsors-container {
+  width: 100%;
+  min-height: 550px;
+  padding: 0px 20px 0px 20px;
+  background: $vsc-default-background-darker;
+}
+
+.gn-sponsor-img {
+  // object-fit: cover;
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+}
+
+.gn-sponsor-border {
+  border: 1px solid $futuristic-strike-teal;
+}

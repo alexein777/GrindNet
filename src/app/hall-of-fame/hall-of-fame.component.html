@@ -1,1 +1,59 @@
-<p>hall-of-fame works!</p>
+<div class="gn-hof-container">
+  <h1 class="gn-hof-header">Newest</h1>
+  <div style="margin-top: 40px;"></div>
+  <table>
+    <tr>
+      <td><span class="gn-username">hrk</span> has entered the Hall of Fame!</td>
+      <td class="gn-td-spacer">{{ hrkDate | date}}</td>
+    </tr>
+    <tr>
+      <td><span class="gn-username">MRX</span> has entered the Hall of Fame!</td>
+      <td class="gn-td-spacer">{{ mrxDate | date}}</td>
+    </tr>
+  </table>
+
+  <div class="gn-div-top-spacer"></div>
+  <mat-divider></mat-divider>
+  <div class="gn-div-bottom-spacer"></div>
+
+  <h1 class="gn-hof-header">Featured videos</h1>
+  <div style="margin-top: 40px;"></div>
+  <mat-grid-list cols="2" rowHeight="300" gutterSize="10">
+    <mat-grid-tile>
+      <iframe width="100%" height="100%" src="https://www.youtube.com/embed/6T3LmoUdu7M?controls=1"></iframe>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <iframe width="100%" height="100%" src="https://www.youtube.com/embed/RIA28lxWDnk?controls=1"></iframe>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <iframe width="100%" height="100%" src="https://www.youtube.com/embed/1U0nhPwrCXg?controls=1"></iframe>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <iframe width="100%" height="100%" src="https://www.youtube.com/embed/_c8nIVSoDN8?controls=1"></iframe>
+    </mat-grid-tile>
+  </mat-grid-list>
+
+  <div class="gn-div-top-spacer"></div>
+  <mat-divider></mat-divider>
+  <div class="gn-div-bottom-spacer"></div>
+
+  <h1 class="gn-hof-header">Players in the Hall of Fame</h1>
+  <div style="margin-top: 40px;"></div>
+  <table class="gn-hof-table">
+    <tr class="gn-th-spacer">
+      <th>Username</th>
+      <th>Rank</th>
+      <th>Sponsored</th>
+      <th>Signature game</th>
+      <th>Date entered</th>
+    </tr>
+    <tr style="height: 20px;"></tr>
+    <tr *ngFor="let player of hallOfFamePlayers">
+      <td><span class="gn-username">{{ player.username }}</span></td>
+      <td>{{ player.rank }}</td>
+      <td>{{ player.sponsored ? 'Yes' : 'No' }}</td>
+      <td>{{ player.signatureGame }}</td>
+      <td>{{ player.hallOfFameDate | date }}</td>
+    </tr>
+  </table>
+</div>

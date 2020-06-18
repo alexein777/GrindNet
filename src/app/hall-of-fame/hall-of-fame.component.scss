@@ -1,0 +1,40 @@
+@import '../../variables';
+
+:host {
+  font-size: 15px;
+}
+
+.gn-hof-container {
+  width: 100%;
+  min-height: 550px;
+  padding: 0px 20px 0px 20px;
+  background: $vsc-default-background-darker;
+}
+
+.gn-hof-header {
+  color: $futuristic-strike-light;
+  font-size: 38px;
+}
+
+.gn-username {
+  color: $futuristic-strike-teal;
+  // font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.gn-td-spacer {
+  padding-left: 40px;
+}
+
+.gn-hof-table {
+  width: 80%;
+}
+
+.gn-th-spacer {
+  padding-bottom: 2px;
+  border-bottom: 1px solid $futuristic-strike-blue;
+}
+
+th {
+  color: $futuristic-strike-blue;
+  font-size: 16px;
+}

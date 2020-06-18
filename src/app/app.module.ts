@@ -27,6 +27,7 @@ import { GameService } from './services/game.service';
 import { NavbarService } from './services/navbar.service';
 import { FooterComponent } from './footer/footer.component';
 import { HallOfFameComponent } from './hall-of-fame/hall-of-fame.component';
+import { SponsorsComponent } from './sponsors/sponsors.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { HallOfFameComponent } from './hall-of-fame/hall-of-fame.component';
     SignUpComponent,
     LoginComponent,
     FooterComponent,
-    HallOfFameComponent
+    HallOfFameComponent,
+    SponsorsComponent
   ],
   imports: [
     BrowserModule,
