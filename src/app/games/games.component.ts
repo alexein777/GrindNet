@@ -11,6 +11,7 @@ import { GameService } from '../services/game.service';
 export class GamesComponent implements OnInit {
   selectedConsole: string = null;
   pcGames: Game[];
+  searchText = '';
 
   constructor(private gameService: GameService, private route: ActivatedRoute) { }
 
@@ -21,7 +22,11 @@ export class GamesComponent implements OnInit {
 
     this.route.params
       .subscribe((params: Params) => this.selectedConsole = params['console']);
-    console.log('Selected console: ' + this.selectedConsole)
+
+    console.log(this.route.snapshot);
   }
 
+  nameToRoute(gameName: string) {
+    return gameName.toLowerCase().replace(' ', '-');
+  }
 }

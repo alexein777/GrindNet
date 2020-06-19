@@ -24,6 +24,11 @@
   padding: 0px;
 }
 
+.gn-game-card:hover {
+  border: 2px solid $futuristic-strike-gold;
+  cursor: pointer;
+}
+
 .gn-game-image {
   // object-fit: cover;
   width: 100%;

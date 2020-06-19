@@ -28,6 +28,8 @@ import { NavbarService } from './services/navbar.service';
 import { FooterComponent } from './footer/footer.component';
 import { HallOfFameComponent } from './hall-of-fame/hall-of-fame.component';
 import { SponsorsComponent } from './sponsors/sponsors.component';
+import { FilterPipe } from './filter.pipe';
+import { GamePreviewComponent } from './game-preview/game-preview.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +43,9 @@ import { SponsorsComponent } from './sponsors/sponsors.component';
     LoginComponent,
     FooterComponent,
     HallOfFameComponent,
-    SponsorsComponent
+    SponsorsComponent,
+    FilterPipe,
+    GamePreviewComponent
   ],
   imports: [
     BrowserModule,
