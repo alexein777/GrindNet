@@ -1,8 +1,13 @@
 <div *ngIf="selectedConsole" class="gn-games-container">
   <h1>PC Games</h1>
   <mat-divider></mat-divider>
-  <input type="text" placeholder="Search game ... (name, type, publisher etc.)"
-    class="form-control gn-game-search">
+
+  <div class="row">
+    <input type="text" placeholder="Search game ... (name, type, publisher etc.)"
+    class="form-control gn-game-search" #gameSearch>
+    <mat-icon class="gn-game-search-icon" (click)="onSearchGame(gameSearch.value)">search</mat-icon>
+  </div>
+
   <div [ngSwitch]="selectedConsole">
     <div *ngSwitchCase="'pc'">
       <mat-grid-list cols="5" rowHeight="280px">

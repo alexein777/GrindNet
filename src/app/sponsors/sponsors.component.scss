@@ -17,3 +17,8 @@
 .gn-sponsor-border {
   border: 1px solid $futuristic-strike-teal;
 }
+
+.gn-sponsor-border:hover {
+  border: 2px solid $futuristic-strike-gold;
+  cursor: pointer;
+}

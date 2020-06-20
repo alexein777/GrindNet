@@ -14,7 +14,7 @@ export class GameService {
     return of(PC_GAMES);
   }
 
-  getPcGamesByName(name: string): Observable<Game> {
+  getPcGameByName(name: string): Observable<Game> {
     return of(PC_GAMES.filter(game => game.name.toLowerCase() === name.toLowerCase())[0]);
   }
 }

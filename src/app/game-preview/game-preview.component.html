@@ -1,28 +1,75 @@
 <div class="gn-gp-container">
-  <h1 class="gn-gp-header">Game preview</h1>
-  <div class="gn-div-top-spacer"></div>
+  <div [ngSwitch]="routeToName(selectedGame)">
+    <div *ngSwitchCase="'dota 2'">
+      <div class="row">
+        <img src="../../assets/images/games/pc/dota2.jpg" class="gn-gp-game-logo">
+        <mat-list>
+          <mat-list-item class="gn-gp-game-title">Dota 2</mat-list-item>
+          <mat-list-item class="gn-gp-game-publisher">Valve</mat-list-item>
+        </mat-list>
+      </div>
 
-  <ol>
-    <li *ngFor="let guide of ggData.dota2Guides">
-      {{ guide.name }}
-    </li>
-  </ol>
+      <div class="gn-div-top-spacer"></div>
+      <mat-divider></mat-divider>
+      <div class="gn-div-bottom-spacer"></div>
 
-  <!-- <table class="gn-hof-table">
-    <tr class="gn-th-spacer">
-      <th>Username</th>
-      <th>Rank</th>
-      <th>Sponsored</th>
-      <th>Signature game</th>
-      <th>Date entered</th>
-    </tr>
-    <tr style="height: 20px;"></tr>
-    <tr *ngFor="let player of hallOfFamePlayers">
-      <td><span class="gn-username">{{ player.username }}</span></td>
-      <td>{{ player.rank }}</td>
-      <td>{{ player.sponsored ? 'Yes' : 'No' }}</td>
-      <td>{{ player.signatureGame }}</td>
-      <td>{{ player.hallOfFameDate | date }}</td>
-    </tr>
-  </table> -->
+      <h1 class="gn-gp-header">Top rated videos</h1>
+      <div style="margin-top: 50px;"></div>
+      <mat-grid-list cols="2" rowHeight="300" gutterSize="10">
+        <mat-grid-tile>
+          <iframe width="100%" height="100%" src="https://www.youtube.com/embed/s_WOWgwSaQI?controls=1"></iframe>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <iframe width="100%" height="100%" src="https://www.youtube.com/embed/DOB_gaKwmh8?controls=1"></iframe>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <iframe width="100%" height="100%" src="https://www.youtube.com/embed/UgtUwfWYDb8?controls=1"></iframe>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <iframe width="100%" height="100%" src="https://www.youtube.com/embed/cNaj1HS3cR4?controls=1"></iframe>
+        </mat-grid-tile>
+      </mat-grid-list>
+
+      <div class="gn-div-top-spacer"></div>
+      <mat-divider></mat-divider>
+      <div class="gn-div-bottom-spacer"></div>
+
+      <h1 class="gn-gp-header">Guides</h1>
+      <div style="margin-bottom: 50px;"></div>
+
+      <table class="gn-gp-table">
+        <tr class="gn-th-spacer">
+          <th (click)="sortByName()" class="gn-hover">Guide info</th>
+          <th (click)="sortByAuthor()" class="gn-hover">Created by</th>
+          <th (click)="sortByAuthorRank()" class="gn-hover">Author rank</th>
+          <th (click)="sortByAuthorInHallOfFame()" class="gn-hover">Author in Hall of Fame?</th>
+          <th (click)="sortByRating()" class="gn-hover">Guide rating</th>
+          <th (click)="sortByDateCreated()" class="gn-hover">Date created</th>
+          <th>Link</th>
+        </tr>
+        <tr style="height: 20px;"></tr>
+        <tr *ngFor="let guide of ggDataService.dota2Guides">
+          <td>{{ guide.name }}</td>
+          <td><span class="gn-username">{{ guide.author.username }}</span></td>
+          <td [ngClass]="{'gn-legendary-player': guide.author.rank == 'Legendary'}">{{ guide.author.rank }}</td>
+          <td>{{ guide.author.inHallOfFame ? 'Yes' : 'No' }}</td>
+          <td>{{ guide.rating }}</td>
+          <td>{{ guide.dateCreated | date }}</td>
+          <td>
+            <a mat-icon [href]="guide.link" target="_blank">
+              <mat-icon class="gn-link-icon">link</mat-icon>
+            </a>
+          </td>
+        </tr>
+      </table>
+      <div style="margin-top: 50px;"></div>
+
+      <h1 class="gn-gp-header">Comment section</h1>
+      <p style="margin-bottom: 0px;">...</p>
+    </div>
+
+    <div *ngSwitchDefault>
+      <h1 class="gn-game-header">Page in production ... </h1>
+    </div>
+  </div>
 </div>

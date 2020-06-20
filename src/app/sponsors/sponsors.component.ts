@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Sponsor } from '../shared/models/sponsor';
+import { SponsorService } from '../services/sponsor.service';
 
 @Component({
   selector: 'app-sponsors',
@@ -6,20 +8,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sponsors.component.scss']
 })
 export class SponsorsComponent implements OnInit {
-  sponsorImageSrcs: string[];
+  sponsors: Sponsor[];
 
-  constructor() { }
+  constructor(private sponsorService: SponsorService) { }
 
   ngOnInit(): void {
-    this.sponsorImageSrcs = [
-      '../../assets/images/sponsors/cyberpower-pc.jpg',
-      '../../assets/images/sponsors/dx-racer.png',
-      '../../assets/images/sponsors/hyperX.jpg',
-      '../../assets/images/sponsors/ibuypower.jpg',
-      '../../assets/images/sponsors/monster.jpg',
-      '../../assets/images/sponsors/nighthawk.jpg',
-      '../../assets/images/sponsors/benq.jpg'
-    ];
+    this.sponsorService.getSponsors()
+      .subscribe(sponsors => this.sponsors = sponsors);
   }
 
 }

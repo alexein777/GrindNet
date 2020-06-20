@@ -66,3 +66,15 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .gn-div-bottom-spacer {
   margin-bottom: 20px;
 }
+
+.gn-username {
+  color: $futuristic-strike-teal;
+}
+
+.gn-hover:hover {
+  color: $futuristic-strike-gold;
+  cursor: pointer;
+}
+
+
+
