@@ -49,4 +49,18 @@ export class GamesComponent implements OnInit {
           });
     }
   }
+
+  onSearchGameEvent(event: Event) {
+    const searchText = (event.target as HTMLInputElement).value.toLowerCase();
+
+    if (searchText === undefined || searchText === '') {
+      this.gameService.getPcGames()
+        .subscribe(pcGames => this.pcGames = pcGames);
+    } else {
+      this.gameService.getPcGameByName(searchText)
+        .subscribe(game => {
+          this.pcGames = [game];
+        });
+    }
+  }
 }

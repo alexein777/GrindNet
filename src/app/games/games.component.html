@@ -4,8 +4,8 @@
 
   <div class="row">
     <input type="text" placeholder="Search game ... (name, type, publisher etc.)"
-    class="form-control gn-game-search" #gameSearch>
-    <mat-icon class="gn-game-search-icon" (click)="onSearchGame(gameSearch.value)">search</mat-icon>
+    class="form-control gn-game-search" #gameSearch (keyup)="onSearchGameEvent($event)">
+    <!-- <mat-icon class="gn-game-search-icon" (click)="onSearchGame(gameSearch.value)">search</mat-icon> -->
   </div>
 
   <div [ngSwitch]="selectedConsole">
