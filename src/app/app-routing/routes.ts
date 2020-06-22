@@ -15,10 +15,7 @@ export const routes: Routes = [
     children: [
       { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
       { path: 'dashboard', component: DashboardComponent },
-      {
-        path: 'games/:console',
-        component: GamesComponent,
-      },
+      { path: 'games/:console', component: GamesComponent },
       { path: 'hall-of-fame', component: HallOfFameComponent },
       { path: 'sponsors', component: SponsorsComponent },
       { path: 'game-preview/:game', component: GamePreviewComponent }

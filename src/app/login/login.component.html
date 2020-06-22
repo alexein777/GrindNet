@@ -23,8 +23,17 @@
       </mat-dialog-content>
       <hr>
       <div class="form-group form-row justify-content-center gn-button-margin">
-        <button class="btn gn-btn-primary" type="submit" [disabled]="loginForm.invalid">Login</button>
+        <div *ngIf="!anyAccounts">
+          <button class="btn gn-btn-primary" type="submit" appLoginDisable>Login</button>
+        </div>
+        <div *ngIf="anyAccounts">
+          <button class="btn gn-btn-primary" type="submit"
+          [disabled]="loginForm.invalid">Login</button>
+        </div>
         <button class="btn gn-btn-danger" type="reset" mat-dialog-close>Cancel</button>
+      </div>
+      <div *ngIf="!anyAccounts">
+        <p class="gn-error text-center">No accounts in database ...</p>
       </div>
   </form>
 </div>

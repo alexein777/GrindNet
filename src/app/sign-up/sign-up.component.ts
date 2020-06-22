@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { UserAccount } from '../shared/models/user-account';
+import { UserAccountService } from '../services/user-account.service';
 
 @Component({
   selector: 'app-sign-up',
@@ -13,7 +14,6 @@ export class SignUpComponent implements OnInit {
 
   sponsoredPlayer = false;
   signupForm: FormGroup;
-  userDatabase: UserAccount[] = [];
   emailPattern = '[a-zA-Z][a-zA-Z0-9_\.]*@[a-z]+[.][a-z]+';
 
   FORM_INITIAL_VALUE = {
@@ -47,7 +47,7 @@ export class SignUpComponent implements OnInit {
     }
   };
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private uaService: UserAccountService) {
     this.createForm();
   }
 
@@ -104,7 +104,7 @@ export class SignUpComponent implements OnInit {
 
   onSubmit() {
     const newUserAccount = this.signupForm.value;
-    this.userDatabase.push(newUserAccount);
+    this.uaService.addUserAccount(newUserAccount);
     console.log(newUserAccount);
 
     this.onResetForm();

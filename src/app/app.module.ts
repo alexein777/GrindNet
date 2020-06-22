@@ -30,6 +30,7 @@ import { HallOfFameComponent } from './hall-of-fame/hall-of-fame.component';
 import { SponsorsComponent } from './sponsors/sponsors.component';
 import { FilterPipe } from './filter.pipe';
 import { GamePreviewComponent } from './game-preview/game-preview.component';
+import { LoginDisableDirective } from './login-disable.directive';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { GamePreviewComponent } from './game-preview/game-preview.component';
     HallOfFameComponent,
     SponsorsComponent,
     FilterPipe,
-    GamePreviewComponent
+    GamePreviewComponent,
+    LoginDisableDirective
   ],
   imports: [
     BrowserModule,
