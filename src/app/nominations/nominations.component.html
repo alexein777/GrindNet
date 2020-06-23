@@ -1,0 +1,20 @@
+<div class="gn-nominations-container">
+  <h1 class="gn-nominations-header">Nominated players</h1>
+  <div class="gn-div-top-spacer"></div>
+
+  <div class="gn-nominations-blocks-container">
+    <app-nomination *ngFor="let nomination of nominations"
+                    [nominationData]="nomination"></app-nomination>
+  </div>
+
+  <div class="gn-div-top-spacer"></div>
+  <mat-divider></mat-divider>
+  <div class="gn-div-bottom-spacer"></div>
+
+  <h1 class="gn-nominations-header">Nominate player</h1>
+  <div class="gn-div-top-spacer"></div>
+
+  <app-nomination-creator (catchCreatedNomination)="onCatchCreatedNomination($event)"></app-nomination-creator>
+
+  <div style="padding-top: 100px;"></div>
+</div>

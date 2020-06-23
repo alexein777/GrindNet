@@ -1,0 +1,31 @@
+<div class="gn-nomination-block">
+  <p class="gn-nomination-title">
+    <span>Nominated player: </span>
+    <span class="gn-username">{{ nomination.nominatedPlayer }}</span>
+  </p>
+  <p>
+    <span>Nominated player rank: </span>
+    <span class="gn-nomination-highlight">{{ nomination.nominatedPlayerRank }}</span>
+  </p>
+  <p>
+    <span>Nominator: </span>
+    <span class="gn-nomination-highlight-no-color gn-username">{{ nomination.nominator }}</span>
+  </p>
+  <p>
+    <span>Nominator rank: </span>
+    <span [ngClass]="{
+      'gn-legendary-player': nomination.nominatorRank === 'Legendary',
+      'gn-nomination-highlight': nomination.nominatorRank !== 'Legendary'
+    }">
+      {{ nomination.nominatorRank }}
+    </span>
+  </p>
+  <p>
+    <span>Nominated for: </span>
+    <span class="gn-nomination-highlight">{{ nomination.nominatedFor }}</span>
+  </p>
+  <p>
+    <span>Reason: </span>
+    <span class="gn-nomination-highlight">{{ nomination.reason }}</span>
+  </p>
+</div>

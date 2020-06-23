@@ -50,7 +50,7 @@
     <tr style="height: 20px;"></tr>
     <tr *ngFor="let player of hallOfFamePlayers">
       <td><span class="gn-username">{{ player.username }}</span></td>
-      <td>{{ player.rank }}</td>
+      <td [ngClass]="{'gn-legendary-player': player.rank === 'Legendary'}">{{ player.rank }}</td>
       <td>{{ player.sponsored ? 'Yes' : 'No' }}</td>
       <td>{{ player.signatureGame }}</td>
       <td>{{ player.hallOfFameDate | date }}</td>

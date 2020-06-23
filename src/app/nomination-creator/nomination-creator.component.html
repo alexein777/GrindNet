@@ -1,0 +1,46 @@
+<div class="form-group gn-form-group">
+  <div class="row">
+    <div class="col-md-6">
+      <label for="playerUsername">Player username</label>
+      <input name="playerUsername" type="text" class="form-control gn-nominations-input"
+        placeholder="Enter player username ..." #nomPlayerUsername>
+    </div>
+    <div class="col-md-6">
+      <label for="playerRank">Player rank</label>
+      <input name="playerRank" type="text" class="form-control gn-nominations-input"
+        placeholder="Enter player rank ..." #nomPlayerRank>
+    </div>
+  </div>
+</div>
+<div class="form-group gn-form-group">
+  <div class="row">
+    <div class="col-md-6">
+      <label for="nominatorUsername">Nominator username</label>
+      <input name="nominatorUsername" type="text" class="form-control gn-nominations-input"
+        placeholder="Enter nominator username ..." #nomNominatorUsername>
+    </div>
+    <div class="col-md-6">
+      <label for="nominatorRank">Nominator rank</label>
+      <input name="nominatorRank" type="text" class="form-control gn-nominations-input"
+        placeholder="Enter nominator rank ..." #nomNominatorRank>
+    </div>
+  </div>
+</div>
+<div class="form-group gn-form-group">
+  <div class="row">
+    <div class="col-md-6">
+      <label for="nominateFor">Nominate for</label>
+      <input name="nominateFor" type="text" class="form-control gn-nominations-input"
+        placeholder="Type new player rank or 'Hall of Fame' ..." #nomNominateFor>
+    </div>
+    <div class="col-md-6">
+      <label for="nominationInfo">Nomination info</label>
+      <input name="nominationInfo" type="text" class="form-control gn-nominations-input"
+        placeholder="Enter reason for your nomination ..." #nomNominationInfo>
+    </div>
+  </div>
+</div>
+<div class="margin-top: 30px; padding-top: 50px;"></div>
+<div class="form-group gn-form-group">
+  <button class="btn gn-btn-primary-wide" (click)="onNominate()">Nominate</button>
+</div>

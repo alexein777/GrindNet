@@ -31,6 +31,9 @@ import { SponsorsComponent } from './sponsors/sponsors.component';
 import { FilterPipe } from './filter.pipe';
 import { GamePreviewComponent } from './game-preview/game-preview.component';
 import { LoginDisableDirective } from './login-disable.directive';
+import { NominationsComponent } from './nominations/nominations.component';
+import { NominationComponent } from './nomination/nomination.component';
+import { NominationCreatorComponent } from './nomination-creator/nomination-creator.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +50,10 @@ import { LoginDisableDirective } from './login-disable.directive';
     SponsorsComponent,
     FilterPipe,
     GamePreviewComponent,
-    LoginDisableDirective
+    LoginDisableDirective,
+    NominationsComponent,
+    NominationComponent,
+    NominationCreatorComponent,
   ],
   imports: [
     BrowserModule,

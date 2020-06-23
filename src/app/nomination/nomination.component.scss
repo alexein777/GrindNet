@@ -1,0 +1,29 @@
+@import '../../variables';
+
+.gn-nomination-block {
+  display: inline-block;
+  width: 300px;
+  height: 260px;
+  margin: 10px 10px 10px 10px;
+  padding: 10px 10px 10px 10px;
+  border: 1px solid $futuristic-strike-teal;
+}
+
+.gn-nomination-title {
+  text-align: center;
+  font-size: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid $futuristic-strike-teal;
+}
+
+.gn-nomination-highlight {
+  color: rgb(162, 212, 210);
+  padding-left: 5px;
+  font-size: 16px;
+}
+
+.gn-nomination-highlight-no-color {
+  padding-left: 5px;
+  font-size: 16px;
+}

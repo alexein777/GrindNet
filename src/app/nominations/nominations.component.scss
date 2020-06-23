@@ -1,0 +1,17 @@
+@import '../../variables';
+
+.gn-nominations-container {
+  width: 100%;
+  min-height: 800px;
+  padding: 0px 20px 0px 20px;
+  background: $vsc-default-background-darker;
+}
+
+.gn-nominations-blocks-container {
+  width: 90%;
+}
+
+.gn-nominations-header {
+  color: $futuristic-strike-light;
+  font-size: 38px;
+}
